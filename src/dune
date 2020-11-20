@@ -1,0 +1,2 @@
+(library (name abstract_algebra) (public_name abstract_algebra)
+ (libraries base) (preprocess (pps ppx_jane)))
