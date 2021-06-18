@@ -11,12 +11,17 @@ module Commutative_group = struct
       + commutativity: [a + b = b + a]
   *)
 
-  module type S = sig
-    type t [@@deriving sexp]
+  module type Without_sexp = sig
+    type t
 
     val zero : t
     val (+)  : t -> t -> t
     val (-)  : t -> t -> t
+  end
+
+  module type S = sig
+    type t [@@deriving sexp]
+    include Without_sexp with type t := t
   end
 end
 
