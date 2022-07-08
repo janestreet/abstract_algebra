@@ -32,4 +32,3 @@ module Vector_space = struct
     val scale : t -> float -> t
   end
 end
-
