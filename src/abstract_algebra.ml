@@ -1,4 +1,3 @@
-
 open Base
 
 module Commutative_group = struct
@@ -15,12 +14,13 @@ module Commutative_group = struct
     type t
 
     val zero : t
-    val (+)  : t -> t -> t
-    val (-)  : t -> t -> t
+    val ( + ) : t -> t -> t
+    val ( - ) : t -> t -> t
   end
 
   module type S = sig
     type t [@@deriving sexp]
+
     include Without_sexp with type t := t
   end
 end
@@ -28,7 +28,9 @@ end
 module Vector_space = struct
   module type S = sig
     type t
+
     include Commutative_group.S with type t := t
+
     val scale : t -> float -> t
   end
 end
