@@ -8,6 +8,10 @@ module Commutative_group = struct
       + inverses: given any [a] there exists a (unique) elt [b] such that [a + b = b + a =
       zero]
       + commutativity: [a + b = b + a]
+
+      Note that subtraction must be equivalent to addition of the inverse:
+
+      + [a - b = a + b'], where [b + b' = 0]
   *)
 
   module type Without_sexp = sig
