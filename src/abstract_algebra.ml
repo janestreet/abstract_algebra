@@ -5,14 +5,13 @@ module Commutative_group = struct
 
       + associativity: [(a + b) + c = a + (b + c)]
       + identity: [zero + a = a + zero = a]
-      + inverses: given any [a] there exists a (unique) elt [b] such that [a + b = b + a =
-      zero]
+      + inverses: given any [a] there exists a (unique) elt [b] such that
+        [a + b = b + a = zero]
       + commutativity: [a + b = b + a]
 
       Note that subtraction must be equivalent to addition of the inverse:
 
-      + [a - b = a + b'], where [b + b' = 0]
-  *)
+      + [a - b = a + b'], where [b + b' = 0] *)
 
   module type Without_sexp = sig
     type t
