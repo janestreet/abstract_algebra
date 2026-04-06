@@ -6,6 +6,7 @@ bug-reports: "https://github.com/janestreet/abstract_algebra/issues"
 dev-repo: "git+https://github.com/janestreet/abstract_algebra.git"
 doc: "https://ocaml.janestreet.com/ocaml-core/latest/doc/abstract_algebra/index.html"
 license: "MIT"
+x-maintenance-intent: ["(latest)"]
 build: [
   ["dune" "build" "-p" name "-j" jobs]
 ]
